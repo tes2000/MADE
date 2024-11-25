@@ -41,7 +41,7 @@ This dataset provides monthly weather data for Los Angeles, including temperatur
 - **TMAX**: Maximum temperature recorded during the month (in °C)
 - **PRCP**: Total precipitation for the month (in mm)
 - **WSPD**: Average wind speed during the month (in km/h)
-etc
+- etc
 
 ## Work Packages
 

@@ -8,7 +8,7 @@ import gzip
 
 # Define paths
 DATA_DIR = r"C:\Users\HP\Documents\MADE\data"
-SOURCE_INFO_FILE = r"C:\Users\HP\Documents\MADE\project"
+SOURCE_INFO_FILE = r"C:\Users\HP\Documents\MADE\project\source_info.json"
 
 # Function to fetch data
 def fetch_data():
@@ -49,13 +49,13 @@ def transform_data(datasets):
             df = df.drop(columns=columns_to_drop, errors='ignore')
             
             # Convert DATE OCC column to date format
-            df['DATE OCC'] = pd.to_datetime(df['DATE OCC'], errors='coerce')
+            #df['DATE OCC'] = pd.to_datetime(df['DATE OCC'], errors='coerce')
             
             # Filter by date range
-            start_date = '2020-01-01'
-            end_date = '2021-08-16'
-            df = df[(df['DATE OCC'] >= start_date) & (df['DATE OCC'] <= end_date)]
-            print(f"Filtered crime data from {start_date} to {end_date}")
+            #start_date = '2020-01-01'
+            #end_date = '2021-08-16'
+           # df = df[(df['DATE OCC'] >= start_date) & (df['DATE OCC'] <= end_date)]
+           # print(f"Filtered crime data from {start_date} to {end_date}")
 
     
     return transformed_data
