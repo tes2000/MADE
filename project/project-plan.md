@@ -6,7 +6,7 @@ Crime Data Analysis in Los Angeles
 
 1. What are the patterns in crime types and locations across different neighborhoods in Los Angeles?
 2. How do crime rates vary by time of day, day of the week, or season in Los Angeles?
-3. Can we predict future crime hotspots based on historical data?
+3. Are crime rates in Los Angeles related to its weather trend?
 
 ## Description
 
