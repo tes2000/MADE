@@ -15,7 +15,8 @@ The analysis will provide a deeper understanding of crime patterns in Los Angele
 
 ## Datasources
 
-### Datasource1: Kaggle Crime in Los Angeles Dataset
+### Datasource1: Crime in Los Angeles Dataset
+* Metadata URL: https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8/about_data 
 * Data URL: https://www.kaggle.com/code/fadymamdouh01/crime-in-los-angeles-data/input
 * Data Type: CSV
 
@@ -28,15 +29,25 @@ This dataset contains records of crime incidents in Los Angeles, with details on
 - **TIME OCC**: Time when the crime occured.
 - etc
 
+### Datasource2: Weather in Los Angeles Dataset
+* Data URL: https://bulk.meteostat.net/v2/monthly/72295.csv.gz 
+* Data Type: CSV
+
+This dataset provides monthly weather data for Los Angeles, including temperature, precipitation, and other climatic variables. It is ideal for correlating crime patterns with weather conditions to uncover potential relationships. Key attributes in the dataset include:
+
+- **Date**: The specific month and year of the weather record
+- **TAVG**: Average temperature for the month (in °C)
+- **TMIN**: Minimum temperature recorded during the month (in °C)
+- **TMAX**: Maximum temperature recorded during the month (in °C)
+- **PRCP**: Total precipitation for the month (in mm)
+- **WSPD**: Average wind speed during the month (in km/h)
+etc
+
 ## Work Packages
 
-1. Clean the data by removing duplicates and handling missing values.
-2. Conduct basic statistics, visualizations, and summary reports on the dataset to understand its characteristics.
-3. Identify key factors (e.g., location, time) that influence crime rates.
-4. Explore various clustering algorithms (e.g., K-means, DBSCAN) to detect high-crime areas.
-5. Analyze crime patterns based on time of day, day of the week, and season.
-6. Develop predictive models to forecast crime hotspots based on historical data.
-7. Evaluate model performance using metrics like accuracy and precision for hotspot predictions.
-8. Visualize spatial crime patterns using geospatial mapping techniques.
-9. Document the methodology, findings, and recommendations in a comprehensive report.
-10. Build a dashboard for interactive visualization of crime data (optional).
+1. Extract the data from multiple sources
+2. Implement the data transformation step in ETL Pipeline
+3. Implement the data loading step in ETL Data Pipeline
+4. Perform automated tests for the project
+5. Continuous integration pipeline for the project
+6. Final report and presentation submission
