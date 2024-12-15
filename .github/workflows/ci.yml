@@ -1,4 +1,4 @@
-name: CI 
+name: CI for Windows Project
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: windows-latest 
+    runs-on: windows-latest  # Use Windows runner
 
     steps:
     - name: Checkout Repository
@@ -16,13 +16,19 @@ jobs:
     - name: Set up Python 3.12.4
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12.4'  
+        python-version: '3.12.4'
 
-    - name: Check Versions
+    - name: Install SQLite CLI
+      run: |
+        echo "Installing SQLite..."
+        choco install sqlite --no-progress
+        echo "SQLite version:"
+        sqlite3 --version
+
+    - name: Check Python and SQLite Versions
       run: |
         python --version
-        echo "Checking SQLite version:"
-        python -c "import sqlite3; print(sqlite3.sqlite_version)"
+        python -c "import sqlite3; print(f'SQLite version: {sqlite3.sqlite_version}')"
 
     - name: Install Dependencies
       run: |
