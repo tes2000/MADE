@@ -7,8 +7,8 @@ import io
 import gzip
 
 # Define paths
-DATA_DIR = r"C:\Users\HP\Documents\MADE\data"
-SOURCE_INFO_FILE = r"C:\Users\HP\Documents\MADE\project\source_info.json"
+DATA_DIR = r"data"
+SOURCE_INFO_FILE = r"source_info.json"
 
 # Function to fetch data
 def fetch_data():
