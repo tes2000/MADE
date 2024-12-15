@@ -8,7 +8,7 @@ import gzip
 
 # Define paths
 DATA_DIR = r"data"
-SOURCE_INFO_FILE = r"source_info.json"
+SOURCE_INFO_FILE = r"project/source_info.json"
 
 # Function to fetch data
 def fetch_data():
