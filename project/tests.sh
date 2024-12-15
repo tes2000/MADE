@@ -4,12 +4,9 @@
 OUTPUT_FILE1="data/los_angeles_data_portal.sqlite"
 OUTPUT_FILE2="data/meteostat.sqlite"
 
-# Use the virtual environment's Python binary explicitly
-PYTHON_BIN="/mnt/c/Users/HP/Documents/venv/Scripts/python.exe"
-
 # Run the pipeline using the virtual environment's Python binary
 echo "Executing pipeline.py..."
-"$PYTHON_BIN" project/pipeline.py
+python3 project/pipeline.py
 
 # Validate the pipeline execution
 if [ $? -ne 0 ]; then
